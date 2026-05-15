@@ -376,98 +376,618 @@ const SCALE_SCORE_MAPS = {
  * CONFIGURAÇÃO DAS PERGUNTAS (DINÂMICO)
  **************************************************************/
 const FORM_QUESTIONS = [
-  
-{
-  name: "1",
-  type: "radio",
-  text: "Algum de seus relacionamentos foi problemático, com muitas discussões ou separações frequentes?",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "2",
-  type: "radio",
-  text: "Você se machucou fisicamente de forma deliberada (por exemplo, deu um soco em si mesmo, se cortou, se queimou ou tentou suicídio)?",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "3",
-  type: "radio",
-  text: "Você já teve pelo menos dois outros problemas com impulsividade (por exemplo, comer compulsivamente, gastar muito, beber demais, explosões verbais)?",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "4",
-  type: "radio",
-  text: "Você tem estado muito mal-humorado?",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "5",
-  type: "radio",
-  text: "Você já sentiu muita raiva muitas vezes, agindo de maneira explosiva ou sarcástica?",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "6",
-  type: "radio",
-  text: "Você costuma desconfiar de outras pessoas?",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "7",
-  type: "radio",
-  text: "Você frequentemente sente que está perdendo a noção da realidade?",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "8",
-  type: "radio",
-  text: "Você tem se sentido cronicamente vazio?",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "9",
-  type: "radio",
-  text: "Você já sentiu muitas vezes que não sabe quem você é ou qual sua identidade?",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "10",
-  type: "radio",
-  text: "Você fez esforços desesperados para evitar se sentir abandonado ou ser abandonado (por exemplo, ligou repetidamente para alguém para se assegurar de que ainda se importava, implorou para que não o[a] deixassem, agarrou-se a eles fisicamente)?",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-}
+  {
+    name: "1",
+    type: "radio",
+    section: "Borderline — Triagem & História",
+    text: "Desde o início da vida adulta, você percebe um padrão persistente de instabilidade emocional, relacionamentos intensos ou impulsividade que se repete em diferentes fases da sua vida?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "2",
+    type: "radio",
+    section: "Borderline — Triagem & História",
+    text: "Essas dificuldades aparecem em mais de um contexto da sua vida, como relacionamentos amorosos, família, amizades, trabalho, estudos ou vida social?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "3",
+    type: "radio",
+    section: "Borderline — Triagem & História",
+    text: "Você sente que suas emoções mudam de forma muito intensa e rápida, principalmente quando se sente rejeitado, abandonado, criticado ou frustrado?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "4",
+    type: "radio",
+    section: "Borderline — Triagem & História",
+    text: "Você costuma sentir que suas reações emocionais são mais fortes do que a situação justificaria, mesmo quando depois percebe que reagiu de forma exagerada?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
 
+  {
+    name: "5",
+    type: "radio",
+    section: "Borderline — Medo de Abandono",
+    text: "Você sente medo intenso de ser abandonado, rejeitado, trocado ou deixado de lado por pessoas importantes para você?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "6",
+    type: "radio",
+    section: "Borderline — Medo de Abandono",
+    text: "Quando alguém importante demora para responder, se afasta, muda o tom de voz ou parece frio, você interpreta isso como sinal de rejeição ou abandono?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "7",
+    type: "radio",
+    section: "Borderline — Medo de Abandono",
+    text: "Quando sente que pode ser abandonado, você faz esforços intensos para impedir que a pessoa vá embora, como insistir, implorar, discutir, vigiar, ameaçar terminar ou tentar controlar a situação?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "8",
+    type: "radio",
+    section: "Borderline — Medo de Abandono",
+    text: "Você já tomou atitudes impulsivas ou desesperadas para evitar que alguém se afastasse de você?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "9",
+    type: "radio",
+    section: "Borderline — Relacionamentos Instáveis",
+    text: "Seus relacionamentos costumam ser muito intensos, com aproximações rápidas, grande envolvimento emocional e medo forte de perder a pessoa?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "10",
+    type: "radio",
+    section: "Borderline — Relacionamentos Instáveis",
+    text: "Você costuma alternar entre idealizar uma pessoa, achando que ela é maravilhosa, e depois se decepcionar intensamente, sentindo raiva, mágoa ou desprezo por ela?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "11",
+    type: "radio",
+    section: "Borderline — Relacionamentos Instáveis",
+    text: "Nos seus relacionamentos, pequenos sinais de distanciamento costumam gerar discussões, crises, cobranças ou rompimentos intensos?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "12",
+    type: "radio",
+    section: "Borderline — Relacionamentos Instáveis",
+    text: "Você já rompeu relações importantes de forma impulsiva durante uma crise emocional e depois se arrependeu?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "13",
+    type: "radio",
+    section: "Borderline — Relacionamentos Instáveis",
+    text: "Você percebe que seus vínculos afetivos costumam oscilar entre muita proximidade e muito conflito?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "14",
+    type: "radio",
+    section: "Borderline — Autoimagem e Identidade",
+    text: "Você sente dificuldade persistente para saber quem você é, o que quer, quais são seus valores ou qual direção deseja seguir na vida?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "15",
+    type: "radio",
+    section: "Borderline — Autoimagem e Identidade",
+    text: "Sua forma de se enxergar muda muito, passando de se sentir uma pessoa boa, capaz ou especial para se sentir ruim, vazia, inútil ou sem valor?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "16",
+    type: "radio",
+    section: "Borderline — Autoimagem e Identidade",
+    text: "Você muda com frequência seus objetivos, planos, gostos, estilo de vida, crenças ou escolhas importantes conforme o momento emocional ou as pessoas com quem está envolvido?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "17",
+    type: "radio",
+    section: "Borderline — Autoimagem e Identidade",
+    text: "Você sente que precisa da presença, aprovação ou validação de outras pessoas para conseguir se sentir real, importante ou com algum valor?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "18",
+    type: "radio",
+    section: "Borderline — Autoimagem e Identidade",
+    text: "Você costuma se sentir confuso sobre sua identidade, como se tivesse versões muito diferentes de si mesmo em momentos ou relações diferentes?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "19",
+    type: "radio",
+    section: "Borderline — Impulsividade",
+    text: "Você costuma agir por impulso quando está emocionalmente abalado, sem conseguir pensar nas consequências antes de agir?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "20",
+    type: "radio",
+    section: "Borderline — Impulsividade",
+    text: "Você já teve impulsividade com gastos, compras, dívidas ou decisões financeiras que depois trouxeram arrependimento ou prejuízo?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "21",
+    type: "radio",
+    section: "Borderline — Impulsividade",
+    text: "Você já teve impulsividade sexual, como se envolver sexualmente sem planejamento, sem proteção, por carência, raiva, vazio ou necessidade de validação?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "22",
+    type: "radio",
+    section: "Borderline — Impulsividade",
+    text: "Você já dirigiu de forma perigosa, agressiva ou imprudente quando estava emocionalmente alterado?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "23",
+    type: "radio",
+    section: "Borderline — Impulsividade",
+    text: "Você já usou álcool, drogas, medicações ou outras substâncias de forma impulsiva para aliviar angústia, raiva, vazio ou sofrimento emocional?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "24",
+    type: "radio",
+    section: "Borderline — Impulsividade",
+    text: "Você já teve episódios de comer compulsivamente ou perder o controle com comida em momentos de sofrimento emocional?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "25",
+    type: "radio",
+    section: "Borderline — Impulsividade",
+    text: "Sua impulsividade já causou prejuízos importantes em pelo menos duas áreas da vida, como finanças, sexo, uso de substâncias, direção, alimentação, trabalho ou relacionamentos?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "26",
+    type: "radio",
+    section: "Borderline — Autoagressão e Suicidalidade",
+    text: "Você já se machucou de propósito, como cortar, arranhar, bater em si mesmo, se queimar ou provocar dor física para aliviar sofrimento emocional?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "27",
+    type: "radio",
+    section: "Borderline — Autoagressão e Suicidalidade",
+    text: "Você já teve vontade de se machucar quando sentiu rejeição, abandono, culpa, raiva, vazio ou sofrimento emocional intenso?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "28",
+    type: "radio",
+    section: "Borderline — Autoagressão e Suicidalidade",
+    text: "Você já ameaçou se machucar ou ameaçou se matar durante discussões, términos, conflitos ou medo de abandono?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "29",
+    type: "radio",
+    section: "Borderline — Autoagressão e Suicidalidade",
+    text: "Você já teve pensamentos recorrentes de morte, vontade de desaparecer ou ideias suicidas em momentos de crise emocional?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "30",
+    type: "radio",
+    section: "Borderline — Autoagressão e Suicidalidade",
+    text: "Você já fez plano, preparação ou tentativa de suicídio em algum momento da vida?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "31",
+    type: "radio",
+    section: "Borderline — Autoagressão e Suicidalidade",
+    text: "Atualmente, você sente risco de se machucar, tentar suicídio ou agir contra a própria vida?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "32",
+    type: "radio",
+    section: "Borderline — Instabilidade Afetiva",
+    text: "Seu humor costuma mudar de forma intensa em poucas horas, passando de tristeza, ansiedade, irritação, raiva, culpa ou vazio para outro estado emocional rapidamente?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "33",
+    type: "radio",
+    section: "Borderline — Instabilidade Afetiva",
+    text: "Suas crises emocionais costumam durar algumas horas e raramente permanecem iguais por vários dias seguidos?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "34",
+    type: "radio",
+    section: "Borderline — Instabilidade Afetiva",
+    text: "Você sente que acontecimentos interpessoais, como rejeição, crítica, silêncio, abandono ou conflito, disparam mudanças emocionais muito fortes em você?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "35",
+    type: "radio",
+    section: "Borderline — Instabilidade Afetiva",
+    text: "Quando está em crise emocional, você tem dificuldade de se acalmar sozinho, mesmo sabendo racionalmente que a situação talvez não seja tão grave?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "36",
+    type: "radio",
+    section: "Borderline — Instabilidade Afetiva",
+    text: "Você costuma sentir emoções muito intensas, como se elas tomassem conta de você e dificultassem pensar com clareza?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "37",
+    type: "radio",
+    section: "Borderline — Sentimento Crônico de Vazio",
+    text: "Você sente um vazio interno persistente, como se faltasse algo dentro de você mesmo quando aparentemente está tudo bem?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "38",
+    type: "radio",
+    section: "Borderline — Sentimento Crônico de Vazio",
+    text: "Você sente uma sensação frequente de tédio profundo, falta de sentido, desconexão ou buraco emocional difícil de preencher?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "39",
+    type: "radio",
+    section: "Borderline — Sentimento Crônico de Vazio",
+    text: "Você tenta aliviar o vazio emocional buscando pessoas, mensagens, sexo, comida, compras, substâncias, trabalho excessivo ou qualquer estímulo imediato?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "40",
+    type: "radio",
+    section: "Borderline — Sentimento Crônico de Vazio",
+    text: "Quando está sozinho, você costuma sentir angústia, vazio, inquietação ou sensação de não existir emocionalmente para ninguém?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "41",
+    type: "radio",
+    section: "Borderline — Raiva Intensa",
+    text: "Você sente raiva muito intensa e difícil de controlar, especialmente quando se sente rejeitado, desrespeitado, invalidado ou abandonado?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "42",
+    type: "radio",
+    section: "Borderline — Raiva Intensa",
+    text: "Durante crises de raiva, você já gritou, ofendeu, ameaçou, quebrou objetos, bateu portas ou agiu de forma agressiva?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "43",
+    type: "radio",
+    section: "Borderline — Raiva Intensa",
+    text: "Você costuma se arrepender depois de explosões de raiva, discussões intensas ou atitudes tomadas no calor da emoção?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "44",
+    type: "radio",
+    section: "Borderline — Raiva Intensa",
+    text: "Você sente dificuldade de controlar sarcasmo, acusações, ironias, ataques verbais ou cobranças quando está magoado ou com raiva?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "45",
+    type: "radio",
+    section: "Borderline — Raiva Intensa",
+    text: "Sua raiva já causou prejuízos importantes em relacionamentos, família, trabalho, estudos ou vida social?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "46",
+    type: "radio",
+    section: "Borderline — Paranoia e Dissociação sob Estresse",
+    text: "Em momentos de estresse intenso, você fica muito desconfiado, achando que as pessoas querem te prejudicar, abandonar, humilhar ou enganar?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "47",
+    type: "radio",
+    section: "Borderline — Paranoia e Dissociação sob Estresse",
+    text: "Em momentos de crise emocional, você sente que está fora do próprio corpo, como se estivesse observando tudo de longe ou no automático?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "48",
+    type: "radio",
+    section: "Borderline — Paranoia e Dissociação sob Estresse",
+    text: "Em momentos de crise emocional, você sente que o mundo parece estranho, irreal, distante ou como se estivesse em um sonho?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "49",
+    type: "radio",
+    section: "Borderline — Paranoia e Dissociação sob Estresse",
+    text: "Em momentos de estresse intenso, você tem lapsos de memória, sensação de apagão emocional ou dificuldade de lembrar partes do que aconteceu?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "50",
+    type: "radio",
+    section: "Borderline — Paranoia e Dissociação sob Estresse",
+    text: "Essas experiências de desconfiança, irrealidade, desligamento ou apagão aparecem principalmente durante crises emocionais ou conflitos interpessoais?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "51",
+    type: "radio",
+    section: "Borderline — Prejuízo Funcional",
+    text: "Esses padrões emocionais, impulsivos ou relacionais prejudicam sua vida afetiva, familiar, profissional, acadêmica, social ou financeira?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "52",
+    type: "radio",
+    section: "Borderline — Prejuízo Funcional",
+    text: "Você já perdeu relacionamentos, oportunidades, empregos, amizades ou estabilidade por causa de crises emocionais, impulsividade, medo de abandono ou explosões de raiva?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "53",
+    type: "radio",
+    section: "Borderline — Prejuízo Funcional",
+    text: "Você sente que vive ciclos repetidos de crise, arrependimento, tentativa de reparar e nova crise nos relacionamentos?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "54",
+    type: "radio",
+    section: "Borderline — Diferencial com Bipolaridade",
+    text: "Suas mudanças de humor costumam durar horas ou parte de um dia, em vez de fases claras de vários dias com energia aumentada, menor necessidade de sono e aceleração persistente?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "55",
+    type: "radio",
+    section: "Borderline — Diferencial com Bipolaridade",
+    text: "Suas crises emocionais costumam ser disparadas por conflitos, rejeição, abandono, crítica ou frustração interpessoal?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "56",
+    type: "radio",
+    section: "Borderline — Diferencial com Bipolaridade",
+    text: "Você já teve uma fase de pelo menos 4 dias seguidos com humor elevado ou irritado, energia aumentada, menor necessidade de sono, fala acelerada e comportamentos de risco, sem depender de conflitos interpessoais?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "57",
+    type: "radio",
+    section: "Borderline — Diferencial e Exclusões",
+    text: "Esses sintomas aparecem apenas quando você usa álcool, drogas, estimulantes, antidepressivos, corticoides ou outras medicações?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "58",
+    type: "radio",
+    section: "Borderline — Diferencial e Exclusões",
+    text: "Essas dificuldades emocionais e relacionais começaram somente depois de um evento traumático específico, sem histórico anterior semelhante?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "59",
+    type: "radio",
+    section: "Borderline — Diferencial e Exclusões",
+    text: "Suas dificuldades de impulsividade, distração ou desorganização existem desde a infância de forma constante, mesmo sem crises de abandono, rejeição ou instabilidade relacional?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "60",
+    type: "radio",
+    section: "Borderline — Diferencial e Exclusões",
+    text: "Você percebe que seus sintomas são melhor explicados por episódios depressivos, episódios maníacos/hipomaníacos, uso de substâncias, trauma, TDAH ou outra condição clínica já diagnosticada?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  }
 ];
 
 const INDICATORS_CONFIG = {};
